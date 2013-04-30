@@ -1,0 +1,19 @@
+<package>
+  <description brief="opentld_tracked_point_xtion">
+
+     opentld_tracked_point_xtion
+
+  </description>
+  <author>sam</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/opentld_tracked_point_xtion</url>
+  <depend package="rospy"/>
+  <depend package="geometry_msgs" />
+  <depend package="tld_msgs" />
+  <depend package="sensor_msgs" />
+  <depend package="visualization_msgs" />
+
+</package>
+
+

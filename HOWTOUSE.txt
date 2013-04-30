@@ -1,0 +1,20 @@
+roscore
+
+roslaunch openni_launch openni.launch depth_registration:=true
+
+
+roslaunch tld_tracker ros_tld_gui.launch image_topic:=/camera/rgb/image_rect_color
+
+roslaunch tld_tracker ros_tld_tracker.launch image_topic:=/camera/rgb/image_rect_color
+
+rosrun opentld_tracked_point_xtion track_point.py
+
+
+On the GUI of the OpenTLD select what to track. if the image is too old or bad select whatever and hit enter. Then press the RESET button and you can choose again, remember to press enter to set the boundingbox.
+
+
+Then open rviz and you can see the pointclod2 and you can either see the Pose thats being published or the Marker thats being published. It will point in the 3D Rviz world at the tracked point.
+You'll see errors with NaNs because I don't take care of them.
+You'll see the OpenTLD window closing cause it's a bit shitty. You can just control+c that process when there is a bounding box is not needed.
+
+
